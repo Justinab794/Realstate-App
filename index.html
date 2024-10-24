@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realstate</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Welcome to RealState</h1>
+    </header>
+    <select id="locationFilter" onchange="filterByLocation()">
+        <option value="all">All Locations</option>
+        <option value="Karnataka">Karnataka</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Kerala">Kerala</option>
+    </select>    
+    <section id="property-listings">
+        <h2>Available Properties</h2>
+        <div id="properties">
+            <!-- Property listings will be displayed here -->
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 RealState</p>
+    </footer>
+    <script src="app.js"></script> <!-- Link to JavaScript file -->
+</body>
+</html>
