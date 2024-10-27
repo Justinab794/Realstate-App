@@ -3,28 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Realstate</title>
+    <title>RealState</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
 </head>
 <body>
     <header>
         <h1>Welcome to RealState</h1>
     </header>
+    
+    <!-- New Property Form - Add this section here -->
+    <section id="property-form">
+        <h2>Add a Property</h2>
+        <form id="addPropertyForm">
+            <label for="name">Property Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required><br>
+
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price" required><br>
+
+            <button type="submit">Add Property</button>
+        </form>
+    </section>
+
+    <!-- Location Filter Dropdown -->
     <select id="locationFilter" onchange="filterByLocation()">
         <option value="all">All Locations</option>
         <option value="Karnataka">Karnataka</option>
         <option value="Chennai">Chennai</option>
         <option value="Kerala">Kerala</option>
     </select>    
+
+    <!-- Property Listings Section -->
     <section id="property-listings">
         <h2>Available Properties</h2>
         <div id="properties">
             <!-- Property listings will be displayed here -->
         </div>
     </section>
+
+    <!-- React App Mounting Point -->
+    <div id="root"></div>
+
     <footer>
         <p>&copy; 2024 RealState</p>
     </footer>
-    <script src="app.js"></script> <!-- Link to JavaScript file -->
+    
+    <!-- Script for JavaScript logic -->
+    <script src="app.js" defer></script>
 </body>
 </html>

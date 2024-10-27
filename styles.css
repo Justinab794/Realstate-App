@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -10,10 +10,59 @@ header {
     color: #fff;
     padding: 20px;
     text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
 }
 
 section {
     padding: 20px;
+    max-width: 800px; /* Set a max width for better readability */
+    margin: 0 auto;   /* Center the section */
+    background: #fff;
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#property-form, #property-listings {
+    margin-bottom: 20px; /* Space between sections */
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"], select {
+    width: calc(100% - 22px); /* Full width with padding */
+    padding: 10px;
+    margin: 10px 0; /* Space between inputs */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+button {
+    background-color: #28a745; /* Green button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.property {
+    background: #f9f9f9; /* Light grey background for properties */
+    padding: 15px;
+    margin: 10px 0; /* Space between properties */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 footer {
@@ -21,7 +70,13 @@ footer {
     padding: 10px;
     background-color: #333;
     color: #fff;
-    position: fixed;
+    position: relative; /* Change position to relative */
     width: 100%;
     bottom: 0;
+}
+
+@media (max-width: 600px) {
+    input[type="text"], select, button {
+        width: 100%; /* Full width for mobile */
+    }
 }
